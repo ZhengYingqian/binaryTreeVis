@@ -1,0 +1,14 @@
+button {
+  padding: 1%;
+  border-radius: 5%;
+  margin: 5px
+}
+
+.jc {
+  font-size: bigger;
+  color: brown;
+}
+.nm {
+  color: black;
+  font-size: 12em;
+}
