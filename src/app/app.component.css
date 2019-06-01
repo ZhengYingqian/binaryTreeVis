@@ -3,12 +3,11 @@ button {
   border-radius: 5%;
   margin: 5px
 }
-
-.jc {
-  font-size: bigger;
-  color: brown;
-}
-.nm {
+/* .nm {
   color: black;
-  font-size: 12em;
+  font-size: 12px;
+} */
+.jc {
+  font-size: 20px;
+  color: brown;
 }
