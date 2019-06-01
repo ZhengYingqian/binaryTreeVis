@@ -16,15 +16,8 @@
   a. 树的静态展现, 同节点要根据color展现颜色，并用文字展现value，
   b. 可以让用户选择查看哪种算法（前序遍历/中序遍历/后序遍历），算法的动态展示，比如前序遍历，通过高亮node节点，告知该算法的遍历顺序
 
-已实现:
-1、二叉树可视化
-2、基本页面设计
-3、组件划分
-
-TODO:
-1、遍历算法
-2、可视化二叉树遍历过程
-3、代码整理和添加必要注释
+实现结果：
+![结果截图](/src/assets/res.png)
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.5.
 
