@@ -24,7 +24,7 @@ export class AppComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.treeService.createChart(this.chartContainer, this.tree);
+    // this.treeService.createChart(this.chartContainer, this.tree);
   }
   // 遍历次序，请求bTree方法，更新keys数组
   show(type) {

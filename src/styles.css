@@ -57,3 +57,7 @@
 p {
 	display: inline;
 }
+
+path{
+  fill: none;
+}
