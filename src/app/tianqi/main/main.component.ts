@@ -2,7 +2,7 @@ import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { TianqiService } from '../tianqi.service';
 import { MultiLine } from '../draw/multiline.component';
 import vegaEmbed from 'vega-embed';
-import { specInit, test } from '../draw/spec';
+import { specInit } from '../draw/spec';
 
 @Component({
   selector: 'app-main',
@@ -26,7 +26,7 @@ export class MainComponent implements OnInit {
     private el: ElementRef) {
   }
   ngOnInit() {
-    const t = 'all';
+    const t = 'clinical';
     this.tqSer.getData(t).subscribe(res => {
       // console.log(res);
       this.data = this.norm2data(t, res);

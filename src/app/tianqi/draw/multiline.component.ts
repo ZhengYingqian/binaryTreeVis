@@ -19,19 +19,11 @@ export class MultiLine {
   }
 
   render() {
-    /* Format Data */
-    const parseDate = d3.timeParse('%Y');
-    // this.data.forEach(function(d) {
-    //   d.values.forEach( ele => {
-    //     ele.date = parseDate(ele.date);
-    //     ele.price = +ele.price;
-    //   });
-    // });
     console.log(this.data);
 
     /* Scale */
-    // @ts-ignore
     const xScale = d3.scaleTime()
+       // @ts-ignore
       .domain(d3.extent(this.data[0].values, d => d.date))
       // .domain([-1, 1])
       .range([0, this.width - this.textW]);
