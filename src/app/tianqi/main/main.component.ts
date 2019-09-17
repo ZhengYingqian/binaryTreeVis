@@ -26,13 +26,20 @@ export class MainComponent implements OnInit {
     private el: ElementRef) {
   }
   ngOnInit() {
-    const t = 'clinical';
+    const t = 'all';
     this.tqSer.getData(t).subscribe(res => {
       // console.log(res);
       this.data = this.norm2data(t, res);
       console.log(this.data);
       this.keys = Object.keys(this.data['1356969600000']);
       this.options = this.keys.map((v, i) => {
+        if (v == '妇科门诊' || v == '儿科门诊') {
+          return {
+            'checked': true,
+            'value': v,
+            'name': v
+          };
+        }
         return {
           'checked': i < 6,
           'value': v,
@@ -169,21 +176,21 @@ export class MainComponent implements OnInit {
     });
   }
 
-// 获取vega配置文件
-spec(data) {
-  console.log(data);
-  const spec = specInit;
-  // @ts-ignore
-  spec.spec.data = { 'values': data };
-  spec.repeat.column = this.leftKeys;
-  spec.repeat.row = this.leftKeys;
-  console.log(spec);
-  return spec;
-}
+  // 获取vega配置文件
+  spec(data) {
+    console.log(data);
+    const spec = specInit;
+    // @ts-ignore
+    spec.spec.data = { 'values': data };
+    spec.repeat.column = this.leftKeys;
+    spec.repeat.row = this.leftKeys;
+    console.log(spec);
+    return spec;
+  }
 
-// vega-lite 绘图
-scatterPlot(data) {
-  const spec = this.spec(data);
-  vegaEmbed('#embed-view', spec, { actions: false });
-}
+  // vega-lite 绘图
+  scatterPlot(data) {
+    const spec = this.spec(data);
+    vegaEmbed('#embed-view', spec, { actions: false });
+  }
 }

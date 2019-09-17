@@ -4,6 +4,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {MatButtonModule, MatCheckboxModule} from '@angular/material';
 
 import { MainComponent } from './main/main.component';
+import { NodeLinkComponent } from './node-link/node-link.component';
+import { RadarComponent } from './radar/radar.component';
 
 @NgModule({
   imports: [
@@ -11,7 +13,11 @@ import { MainComponent } from './main/main.component';
     FormsModule, ReactiveFormsModule,
     MatButtonModule, MatCheckboxModule
   ],
-  declarations: [MainComponent],
+  declarations: [
+    MainComponent,
+    NodeLinkComponent,
+    RadarComponent
+  ],
   exports: [MainComponent]
 })
 export class TianqiModule { }

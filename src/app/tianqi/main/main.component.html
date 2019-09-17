@@ -1,23 +1,24 @@
-
 <div>
-  <p>filter:</p>
-<!--<mat-form-field>-->
-<input type="text" matInput [(ngModel)]="start">
-<input type="text" matInput [(ngModel)]="end">
-  <input type="text" matInput [(ngModel)]="step">
-  <!--</mat-form-field>-->
+    <p>filter:</p>
+    <!--<mat-form-field>-->
+    <input type="text" matInput [(ngModel)]="start">
+    <input type="text" matInput [(ngModel)]="end">
+    <input type="text" matInput [(ngModel)]="step">
+    <!--</mat-form-field>-->
 </div>
 <div>
-  <!--<p>x:</p>-->
-  <mat-checkbox *ngFor = 'let item of options, index as i' [(ngModel)]="options[i].checked">{{item.name}}</mat-checkbox>
+    <!--<p>x:</p>-->
+    <mat-checkbox *ngFor='let item of options, index as i' [(ngModel)]="options[i].checked">{{item.name}}</mat-checkbox>
 </div>
 <!--<div>-->
-  <!--<p>y:</p>-->
-  <!--<mat-checkbox *ngFor = 'let item of yoptions, index as i' [(ngModel)]="yoptions[i].checked">{{item.name}}</mat-checkbox>-->
+<!--<p>y:</p>-->
+<!--<mat-checkbox *ngFor = 'let item of yoptions, index as i' [(ngModel)]="yoptions[i].checked">{{item.name}}</mat-checkbox>-->
 <!--</div>-->
 <div>
-  <button (click)="select(start, end)"> 重绘</button>
-  <button (click)="normData(start, end)"> 归一化</button>
+    <button (click)="select(start, end)"> 重绘</button>
+    <button (click)="normData(start, end)"> 归一化</button>
 </div>
-<div #viewMultiline class="viewMultiline" style="width: 1000px; float: left;"></div>
-<div id ='embed-view'></div>
+<div #viewMultiline class="viewMultiline" style="width: 1000px; float: left; margin-right: 200px"></div>
+<!-- <div id='embed-view'></div> -->
+<!-- <app-node-link></app-node-link> -->
+<app-radar></app-radar>

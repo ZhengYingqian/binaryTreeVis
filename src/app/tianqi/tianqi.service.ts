@@ -14,10 +14,10 @@ export class TianqiService {
     'norm': '/norm'
   };
   api = 'http://localhost:5000';
-  constructor(private httpCli: HttpClient) { }
+  constructor(private http: HttpClient) { }
 
   getData(type) {
-    return this.httpCli.get(this.api + this.datas[type]);
+    return this.http.get(this.api + this.datas[type]);
   }
 
   // post()

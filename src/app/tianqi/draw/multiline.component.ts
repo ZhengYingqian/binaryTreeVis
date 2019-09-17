@@ -3,8 +3,8 @@ export class MultiLine {
   target: HTMLElement;
   data;
   year;
-  width = 1700;
-  height = 800;
+  width = 1200;
+  height = 600;
   margin = 80;
   textW = 200;
   duration = 250;
